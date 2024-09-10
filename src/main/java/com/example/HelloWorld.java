@@ -1,4 +1,4 @@
-package main.java.com.example;
+package com.example;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
