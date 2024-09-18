@@ -7,7 +7,7 @@ import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Produces;
 
 @Controller("/")
-public class HelloController {
+public class PersonController {
 
     @Post("/hello")
     @Produces(MediaType.TEXT_PLAIN)  // Set the correct response type
