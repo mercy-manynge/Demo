@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.micronaut.data:micronaut-data-jdbc'
+    implementation ("io.micronaut.data:micronaut-data-jdbc:3.11.1")
     implementation("io.micronaut.flyway:micronaut-flyway")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
@@ -22,6 +22,10 @@ dependencies {
     testImplementation("io.micronaut:micronaut-http-client")
     annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
     implementation("io.micronaut.validation:micronaut-validation")
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+implementation("mysql:mysql-connector-java")
+
 }
 
 
@@ -57,9 +61,7 @@ micronaut {
     }
 }
 
-shadowJar {
-    mergeServiceFiles()
-}
+
 tasks.named("dockerfileNative") {
     jdkVersion = "21"
 }
